@@ -1,10 +1,18 @@
+$mdc-theme-primary: #27536d;
+$mdc-theme-secondary:	#ea9103;
+$mdc-theme-background: #FFFFFF;
+$mdc-theme-surface: #002b42;
+$mdc-theme-on-primary: #FFFFFF;
+$mdc-theme-on-secondary: #000000;
+$mdc-theme-on-surface: #FFFFFF;
+
 body {
-  color: blue;
+  color: #003151;
 }
 
 @import "@material/button/mdc-button";
 
-.foo-button {
-  @include mdc-button-ink-color(teal);
-  @include mdc-states(teal);
+.button {
+  @include mdc-button-ink-color($mdc-theme-secondary);
+  @include mdc-states($mdc-theme-secondary);
 }
