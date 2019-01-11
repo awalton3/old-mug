@@ -9,12 +9,37 @@
   <link rel="stylesheet" href="bundle.css">
   <!--fonts-->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800" rel="stylesheet">
+  <!-- icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 <body>
-  <button class="button mdc-button">
-    Button
-  </button>
+  <div class="welcome--bg">
+    <!--NAVBAR-->
+    <header id="navbar" class="mdc-top-app-bar navbar">
+      <div class="mdc-top-app-bar__row">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <div class="mdc-layout-grid navbar--width">
+            <div class="mdc-layout-grid__inner">
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-1-phone"><a href="#" id="navmenu_icon" class="material-icons mdc-top-app-bar__navigation-icon navbar_element">menu</a></div>
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--align-middle navbar_element navbar_element--center"><a href="index.html"><img src="images/logoIconReg.png"
+                    width="80px" /></a></div>
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-1-phone"><a href="#" class="material-icons mdc-top-app-bar__navigation-icon navbar_element navbar_element--right">events</a></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+
+    <div class="mdc-top-app-bar--fixed-adjust"></div>
+
+    <!--WELCOME-->
+    <div class="welcome">
+      <div class="welcome_text">CHANGING LIVES, ONE PERSON AT A TIME
+        <div><i class="material-icons welcome_icon">expand_more</i></div>
+      </div>
+    </div>
+  </div>
 
   <script src="bundle.js" async></script>
 </body>

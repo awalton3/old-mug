@@ -1,18 +1,100 @@
+
 $mdc-theme-primary: #27536d;
-$mdc-theme-secondary:	#ea9103;
+$mdc-theme-secondary: #ea9103;
 $mdc-theme-background: #FFFFFF;
 $mdc-theme-surface: #002b42;
 $mdc-theme-on-primary: #FFFFFF;
 $mdc-theme-on-secondary: #000000;
 $mdc-theme-on-surface: #FFFFFF;
+$font-main: 'Montserrat', sans-serif !important;
+
+//mdc material web component stylesheets
+@import "@material/button/mdc-button";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/layout-grid/mdc-layout-grid";
 
 body {
-  color: #003151;
+  margin: 0;
+  font-family: $font-main;
 }
-
-@import "@material/button/mdc-button";
 
 .button {
   @include mdc-button-ink-color($mdc-theme-secondary);
   @include mdc-states($mdc-theme-secondary);
+}
+/* WELCOME */
+.welcome {
+  height: 150vh !important;
+  /*centering text vertically*/
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.welcome--bg {
+  height: 100vh;
+  background-image: url('./images/youngandold.jpg');
+  background-position: 51% 30% !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.welcome_text {
+  color: white;
+  font-size: 3.0rem;
+  text-align: center !important;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+.welcome_icon {
+  color: #ea9103;
+  font-size: 48pt !important;
+  margin: 10px 0;
+}
+/*phones, tablets*/
+@media screen and (max-width: 839px) {
+  .welcome--bg {
+    height: 77vh;
+  }
+  /*adjust text placement and size*/
+  .welcome {
+    height: 95vh !important;
+  }
+
+  .welcome_text {
+    font-size: 1.8rem !important;
+  }
+
+  .welcome_icon {
+    font-size: 27pt !important;
+  }
+}
+/* NAVBAR */
+.navbar {
+  background-color: transparent !important;
+}
+
+.navbar--width {
+  min-width: 100% !important;
+}
+
+.navbar_element {
+  text-decoration: none !important;
+  vertical-align: middle !important;
+}
+
+.navbar_element--center {
+  text-align: center !important;
+}
+
+.navbar_element--right {
+  float: right !important;
+  justify-content: right !important;
+}
+/* tablets, phones */
+@media screen and (max-width: 839px) {
+  .navbar--width {
+    min-width: 133% !important;
+  }
 }

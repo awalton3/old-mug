@@ -6,19 +6,22 @@ module.exports = {
     filename: 'bundle.js',
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.scss$/,
-        use: [
-          {
+        use: [{
             loader: 'file-loader',
             options: {
               name: 'bundle.css',
             },
           },
-          {loader: 'extract-loader'},
-          {loader: 'css-loader'},
-          {loader: 'postcss-loader',
+          {
+            loader: 'extract-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'postcss-loader',
             options: {
               plugins: () => [autoprefixer()],
             },
@@ -38,6 +41,16 @@ module.exports = {
           presets: ['es2015'],
           plugins: ['transform-object-assign']
         },
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8000, // Convert images < 8kb to base64 strings
+            name: 'images/[name].[ext]'
+          }
+        }]
       }
     ],
   },
