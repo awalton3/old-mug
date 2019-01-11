@@ -12,13 +12,72 @@
   <!--icons-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <!--Jquery-->
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
 </head>
 
 <body>
+  <!--NAVDRAWER-->
+  <aside id="navdrawer" class="mdc-drawer mdc-drawer--modal navdrawer">
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+        <div class="mdc-layout-grid navdrawer_mobile_header">
+          <div class="mdc-layout-grid__inner">
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1 mdc-layout-grid__cell--align-middle">
+              <span class="mdc-list-item__text"><img src="images/logoIconReg.png" width="80px;" /></span>
+            </div>
+            <!--blank filler elements-->
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1"></div>
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1"></div>
+            <!--close icon-->
+            <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1"><a href="#" id="navdrawer_close_icon" class="material-icons mdc-top-app-bar__navigation-icon navbar_element navdrawer_mobile_header--right">close</a></div>
+          </div>
+        </div>
+        <a class="mdc-list-item mdc-list-item--activated" href="#" aria-selected="true">
+          <!-- <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i> -->
+          <span class="mdc-list-item__text navdrawer_element">home</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__text navdrawer_element">about us</span>
+        </a>
+        <span class="mdc-list-item__text navdrawer_element navdrawer_subh">services</span>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__text navdrawer_element">tutoring</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__text navdrawer_element">senior services</span>
+        </a>
+        <span class="mdc-list-item__text navdrawer_element navdrawer_subh">stay informed</span>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__text navdrawer_element">events</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__text navdrawer_element">publications</span>
+        </a>
+        <span class="mdc-list-item__text navdrawer_element navdrawer_subh">contribute</span>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__text navdrawer_element">openings</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__text navdrawer_element">donate</span>
+        </a>
+        <a class="mdc-list-item" href="#">
+          <span class="mdc-list-item__text navdrawer_element">contributors</span>
+        </a>
+        <span class="mdc-list-item__text navdrawer_element navdrawer_element navdrawer_subh">contact us</span>
+        <a class="mdc-list-item" href="tel:+301-968-7816">
+          <span class="mdc-list-item__text navdrawer_footer_element">301-968-7816</span>
+        </a>
+        <a class="mdc-list-item" href="mailto:cbatey@m-u-g.org,cmaddox@m-u-g.org">
+          <span class="mdc-list-item__text navdrawer_footer_element">cbatey@m-u-g.org<br>cmaddox@m-u-g.org</span>
+        </a>
+        <a class="mdc-list-item" href="https://goo.gl/maps/fWK6ZbJci3p" style="padding-top: 10px;">
+          <span class="mdc-list-item__text navdrawer_footer_element">408 Addison Road South,<br> Seat Pleasant,MD 20743</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+  <div class="mdc-drawer-scrim"></div>
+
   <div id="welcome" class="welcome--bg">
     <!--NAVBAR-->
     <header id="navbar" class="mdc-top-app-bar navbar">
@@ -26,7 +85,7 @@
         <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
           <div class="mdc-layout-grid navbar--width">
             <div class="mdc-layout-grid__inner">
-              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-1-phone"><a href="#" id="navmenu_icon" class="material-icons mdc-top-app-bar__navigation-icon navbar_element">menu</a></div>
+              <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-1-phone"><a href="#" id="navdrawer_open_icon" class="material-icons mdc-top-app-bar__navigation-icon navbar_element">menu</a></div>
               <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-1-phone mdc-layout-grid__cell--align-middle navbar_element navbar_element--center"><a href="index.html"><img src="images/logoIconReg.png"
                     width="80px" /></a></div>
               <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2-tablet mdc-layout-grid__cell--span-1-phone"><a href="#" class="material-icons mdc-top-app-bar__navigation-icon navbar_element navbar_element--right">events</a></div>
