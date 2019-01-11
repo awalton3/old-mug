@@ -98,3 +98,9 @@ body {
     min-width: 133% !important;
   }
 }
+/* after scroll */
+.navbar.navbar--scrolled {
+  background-color: $mdc-theme-surface !important;
+  color: #ffffff !important;
+  transition: background-color 200ms linear !important;
+}
